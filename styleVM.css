@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.navbar-logo {
+    margin-left: 50px;
+}
+
+.navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-image: url(logo/Vm.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-line {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.nav-item {
+    color: #0f3c73;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 25px;
+    text-shadow: 3px 3px 3px #497ab6;    
+    transition: color 0.3s linear;    
+}
+
+.nav-item:hover {
+    color: darkgray;
+}
+
+.header-down {
+    position: relative;
+
+}
+
+.header-title {
+}
+
+.header-title {
+    color: #fff;
+    font-family: 'Tinos', serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px #000000; 
+    
+    text-align: center;
+    position: absolute;
+    
+    margin-top: 30px;
+}
+
+.cards-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 349px;
+    box-shadow: 10px 10px 40px 20px #0000001A;
+    margin-right: 31px;
+    background-color: #fff;
+    margin-top: -80px;
+    padding: 10px 10px;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 31px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'Tinos', serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.VB {
+    text-decoration: none;
+}
+
+.VMWare {
+    text-decoration: none;
+}
+
+.QEMU {
+    text-decoration: none;
+}
+
+.card-desc {
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #656363;
+
+}
+
+.history {
+    margin-top: 100px;
+    padding-bottom: 200px;
+}
+
+.history-title {
+    font-family: 'Tinos', serif;
+    font-size: 50px;
+    font-weight: 600;
+    width: 444px;
+    text-align: center;
+    margin-top: 21px;
+    margin-left: 400px;
+}
+
+.history-title span{
+    color: #D67E35;
+}
+
+.history-subtitle {
+    font-family: 'Tinos', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #656363;
+    width: 444px;
+    text-align: center;
+    margin-left: 400px;
+}
+
+.history-subtitle span{
+        color: #D67E35;
+}
+
+.history-images {
+    position: relative;
+}
+
+.history-holder {
+    display: flex;
+}
+
+.images-1 {
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 51px;   
+}
+
+.black-block {
+    background-image: url(logo/it.jpg);
+    height: 200px;
+    font-family: 'Tinos', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-text {
+    padding-top: 21px;
+}
+
+.main-text span {
+    color: #D67E35;
+}
+
+.text-desc {
+    font-size: 24px;
+    font-weight: 500;    
+}
+
+.cards-holder-more {
+    display: flex;
+    justify-content: center;
+}
+
+.card-more {
+    width: 349px;
+    box-shadow: 10px 10px 40px 20px #0000001A;
+    margin-right: 31px;
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 10px 10px;
+}
+
+.card-image-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+.card-title-more {
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'Tinos', serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.card-desc-more {
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #656363;
+
+}
+
+.history-2 {
+    margin-top: 166px;
+    padding-bottom: 200px;
+}
+
+.history-title-2 {
+    font-family: 'Tinos', serif;
+    font-size: 50px;
+    font-weight: 600;
+    width: 444px;
+    text-align: center;
+    margin-top: 21px;
+    margin-left: 300px;
+}
+
+.history-title-2 span{
+    color: #D67E35;
+}
+
+.history-subtitle-2 {
+    font-family: 'Tinos', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #656363;
+    width: 444px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.history-images-2 {
+    position: relative;
+}
+
+.history-holder-2 {
+    display: flex;
+}

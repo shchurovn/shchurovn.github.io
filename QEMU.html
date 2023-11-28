@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="styleQEMU.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <title>MGSU</title>
+</head>
+<body>
+    
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="navbar-logo">
+            <img src="logo/logo_msuce.jpg" width="40" height="70" alt="">
+        </a>
+        
+        <div class="nav">
+            <a class='nav-item' href="index.html">Главная</a>
+            <a class='nav-item' href="OS.html">Операционная система</a>
+            <a class='nav-item' href="FS.html">Файловая система</a>
+            <a class='nav-item' href="monitoring.html">Мониторинг  системы</a>
+            <a class='nav-item' href="arxiv.html">Архивация данных</a>
+            <a class='nav-item' href="VM.html">Виртуальные машины</a>
+            <a class='nav-item' href="biblio.html">Библиографический список</a>
+        </div>        
+    </div>    
+</nav>    
+    
+<div class="header">
+    <div class="container">
+
+            <div class="header-down">
+                <div class="header-title">
+                    QEMU
+                </div>
+           
+            </div>
+    </div>
+</div>
+
+
+
+<div class="history">
+    <div class="container">
+        <div class="history-holder">
+            <div class="history-title">
+            </div>                  
+        </div>
+    </div>   
+</div> 
+
+<div class="history-subtitle">
+<br>
+&emsp; QEMU – это программа с открытым исходным кодом для разных платформ, которая позволяет создавать и оперировать с операционными средами. Разработчиком данного программного обеспечения является Fabrice Bellard.<br> 
+&emsp; Инсталляция не представляет собой ничего сложного – скачайте программу и запустите установщик. Следуйте простым инструкциям и дождитесь завершения процесса. К сожалению, после этого у вас не появится никакого ярлыка, и программа не откроется сама, так как она не имеет графического интерфейса, поэтому оперировать с приложением придётся через командную строку.<br>
+&emsp; Открываем командную строку (cmd.exe), набрав в поиске «Командная строка». После её открытия необходимо перейти в директорию, где находится сама программа. Это делается командами, представленными на картинке 6.3.1.<br>
+    <div class="image-1">
+        <img src="logo/QEMU/1.png" alt="">
+    </div>
+&emsp; Рисунок 6.3.1 – команды для перехода в нужную директорию.<br>
+&emsp; Команда cd «имя директории» позволяет перемещаться между директориями, при помощи cd .. вы можете покинуть данную директорию, для перехода на другой логический диск достаточно указать «D:».<br>
+&emsp; Теперь мы можем перейти к созданию виртуального диска. Для этого необходимо набрать команду (рисунок 6.3.2): qemu-img.exe create -f raw win7.img 20480M, где win7.img — название виртуального диска, а 20480 — его размер в мегабайтах. Размер виртуального диска необходимо подбирать так, чтобы он соответствовал требованиям операционной системы.<br>
+    <div class="image-1">
+        <img src="logo/QEMU/2.png" alt="">
+    </div>
+&emsp; Рисунок 6.3.2 – команда для создания виртуального диска. <br>    
+&emsp; Виртуальный диск создан. Теперь на него необходимо установить операционную систему, для этого надо набрать команду (рисунок 6.3.3): qemu-system-x86_64.exe -boot c -m 4096 -hda win7.img -cdrom "D:\Programs\W7.iso".            –x86_64 указывает на эмулирование одной из двух архитектур 32-х битной или же 64-х, –boot показывает, что загрузка с диска с названием «с», -m 4096 выделяет ОС 4096 МБ оперативной памяти, –hda win7.img указывает, что система будет устанавливаться в файл-контейнер «win7.img». Cодержимое прямых кавычек после параметра –cdrom представляет собой путь к установочному образу.<br> 
+    <div class="image-1">
+        <img src="logo/QEMU/3.png" alt="">
+    </div>
+&emsp; Рисунок 6.3.3 – команда для конфигурирования установщика. <br>
+&emsp; Данное действие является заключительным, после этого начнётся стандартная установка операционной системы (рисунок 6.3.4).<br> 
+    <div class="image-1">
+        <img src="logo/QEMU/4.png" alt="">
+    </div>
+&emsp; Рисунок 6.3.4 – стандартная устновка ОС.  <br> 
+&emsp; В случае, если вам необходимо открыть установленную виртуальную машину, то необходимо набрать команду (рисунок 6.3.5): <br> 
+    <div class="image-1">
+        <img src="logo/QEMU/5.png" alt="">
+    </div>
+&emsp; Рисунок 6.3.5 – команда для открытия установленной ОС в QEMU. <br>
+&emsp; В заключении, QEMU – достаточно сложная для обычных пользователей программа, которая вызывает сложности по причине отсутствия графического интерфейса. Для пользователя высокого уровня или системного администратора программа не вызовет никаких сложностей и вовсе покажется гораздо удобнее, так как вся настройка проводится достаточно гибко при помощи команд через консоль.<br>
+    
+<br> <br> <br> <br> <br>
+</div>
+    
+
+    
+</body>
+</html>
